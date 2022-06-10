@@ -1,4 +1,4 @@
-## My Project
+## Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition
 
 TODO: Fill this README out!
 
