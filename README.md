@@ -9,7 +9,7 @@ We study the new problem setting of out-of-distribution detection on long-tailed
 CIFAR10-LT: 
 
 ```
-python stage1.py --gpu 0 --ds cifar10 --Lambda2 0.02 --T 0.2 \
+python stage1.py --gpu 0 --ds cifar10 --Lambda2 0.1 --T 0.07 \
     --drp <where_you_store_all_your_datasets> --srp <where_to_save_the_ckpt>
 ```
 
