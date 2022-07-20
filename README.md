@@ -1,5 +1,7 @@
 # Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition
 
+This is the official implementation of the [Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition](Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition) paper at ICML 22 (Long Presentation).
+
 ## Overview
 
 We study the new problem setting of out-of-distribution detection on long-tailed training set. 
@@ -121,3 +123,11 @@ Long-Tailed-Recognition.pytorch - https://github.com/KaihuaTang/Long-Tailed-Reco
   year={2022},
 }
 ```
+
+## Security
+
+See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+
+## License
+
+This project is licensed under the Apache-2.0 License.
