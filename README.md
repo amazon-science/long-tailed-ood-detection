@@ -1,10 +1,11 @@
 # Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition
 
-This is the official implementation of the [Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition](Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition) paper at ICML 22 (Long Presentation).
+This is the official implementation of the [Partial and Asymmetric Contrastive Learning for Out-of-Distribution Detection in Long-Tailed Recognition](https://proceedings.mlr.press/v162/wang22aq/wang22aq.pdf) paper at ICML 22 (Long Presentation).
 
-## Overview
 
-We study the new problem setting of out-of-distribution detection on long-tailed training set. 
+<p align="center">
+<img width="300"  src="https://user-images.githubusercontent.com/22279212/180052064-c9fa0d55-1e3d-44ac-adf2-60ec89536fc6.png">
+</p>
 
 ## Stage 1 training: Training main branch using PASCL loss
 
