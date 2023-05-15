@@ -107,7 +107,7 @@ def val_cifar_only_id():
     with torch.no_grad():
         for images, targets in test_loader:
             images, targets = images.cuda(), targets.cuda()
-            logits = model(images)
+            logits = model.forward_aux(images)
             pred = logits.data.max(1)[1]
             acc = pred.eq(targets.data).float().mean()
             # append loss:
@@ -117,6 +117,10 @@ def val_cifar_only_id():
     print('clean test time: %.2fs' % (time.time()-ts))
     # test loss and acc of this epoch:
     test_acc = test_acc_meter.avg
+    acc_str = 'ACC: %.4f\n' % (test_acc)
+    print(acc_str)
+    fp.write(acc_str)
+    fp.flush()
     in_labels = np.concatenate(labels_list, axis=0)
     in_preds = np.concatenate(pred_list, axis=0)
 
