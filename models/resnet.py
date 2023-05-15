@@ -53,7 +53,7 @@ class ResNet(nn.Module):
         self.layer4 = self._make_layer(block, 512, num_blocks[3], stride=2, norm=norm)
         self.linear = nn.Linear(512, num_classes)
 
-        # self.aux_linear = nn.Linear(512, num_classes)
+        self.aux_linear = nn.Linear(512, num_classes)
 
         self.projection = nn.Sequential(nn.Linear(512, 512), nn.ReLU(), nn.Linear(512, 128))
 
@@ -79,9 +79,9 @@ class ResNet(nn.Module):
         logits = self.linear(p4) # (10)
         return logits
 
-    # def forward_aux_classifier(self, p4):
-    #     logits = self.aux_linear(p4) # (10)
-    #     return logits
+    def forward_aux_classifier(self, p4):
+        logits = self.aux_linear(p4) # (10)
+        return logits
 
     def forward(self, x):
         p4 = self.forward_features(x)
@@ -92,14 +92,14 @@ class ResNet(nn.Module):
         else:
             return logits
 
-    # def forward_aux(self, x):
-    #     p4 = self.forward_features(x)
-    #     logits = self.forward_aux_classifier(p4)
+    def forward_aux(self, x):
+        p4 = self.forward_features(x)
+        logits = self.forward_aux_classifier(p4)
 
-    #     if self.return_features:
-    #         return logits, p4
-    #     else:
-    #         return logits
+        if self.return_features:
+            return logits, p4
+        else:
+            return logits
 
     def forward_projection(self, p4):
         projected_f = self.projection(p4) # (10)
